@@ -38,20 +38,31 @@ body {
 
 .zagolovok {
     text-align: center;
-    margin-bottom: 30px;
+    margin-top: 0px;
 }
 
 .news-list {
+    padding-top: 89px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-content: space-between;
     align-items: center;
     margin: 20px;
+    gap: 250px;
 }
+
+.maincon {
+    color: #fff;
+    text-align: center;
+    padding-top: 400px;
+    width: 900px;
+}
+
+.butns {}
 
 .logo {
     width: 150px;
-    height: auto;
+    height: 150px;
     /* прибери фіксовану висоту */
 }
 
@@ -107,6 +118,29 @@ body {
     background-color: transparent;
     padding: 5 px;
     border-collapse: collapse;
+}
+
+button {
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #ffffff;
+    background: linear-gradient(to left, transparent 50%, #3a3a3a 50%);
+    background-size: 200% 100%;
+    background-position: right;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: background-position 0.4s ease-in-out, color 0.4s;
+}
+
+button:hover {
+    background-position: left;
+    color: #fff;
 }
 
 .contacts table th,
