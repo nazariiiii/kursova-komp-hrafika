@@ -1,13 +1,73 @@
-.navbar {}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
 
-.newsbutton {
-    text-align: center;
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 16px;
+.banner {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('https://a.travel-assets.com/findyours-php/viewfinder/images/res70/542000/542674-hagia-sophia-ayasofya.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 200px;
+    /* Відступ зверху, щоб заголовок був нижче */
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.logo {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+}
+
+.navigator ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.navigator ul li {
+    position: relative;
+    margin: 0;
+}
+
+.navigator ul li a {
+    text-decoration: none;
     color: #fff;
-    background-color: #009688;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 18px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.navigator ul li a::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #009688;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: width 0.5s;
+}
+
+.navigator ul li a:hover::after {
+    width: 100%;
 }
