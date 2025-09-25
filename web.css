@@ -1,173 +1,210 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
-}
-
-body {
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("photos/bg.jpg") no-repeat center fixed;
-    background-size: cover;
-}
-
-.banner {
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 0;
-}
-
-.navbar {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0px 50px;
-    position: fixed;
-    left: 0;
-}
-
-.news {
-    padding-top: 500px;
-}
-
-.zagolovok {
-    text-align: center;
-    margin-top: 0px;
-}
-
-.news-list {
-    padding-top: 89px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-content: space-between;
-    align-items: center;
-    margin: 20px;
-    gap: 250px;
-}
-
-.maincon {
-    color: #fff;
-    text-align: center;
-    padding-top: 400px;
-    width: 900px;
-}
-
-.butns {}
-
-.logo {
-    width: 150px;
-    height: 150px;
-    /* прибери фіксовану висоту */
-}
-
-.logo img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-    /* тепер працює правильно */
-}
-
-.navigator ul {
-    display: flex;
-    list-style: none;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.navigator ul li {
-    position: static;
-    margin: 0;
-}
-
-.navigator ul li a {
-    text-decoration: none;
-    color: #fff;
-    text-transform: uppercase;
-    font-size: 18px;
-    position: relative;
-    display: inline-block;
-    padding-bottom: 5px;
-}
-
-.navigator ul li a::after {
-    content: '';
-    height: 3px;
-    width: 0;
-    background: #009688;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    transition: width 0.5s;
-}
-
-.contacts table {
-    border: 2px solid rgb(255, 255, 255);
-    border-radius: 25px;
-    overflow: hidden;
-    position: absolute;
-    top: 200px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 5;
-    background-color: transparent;
-    padding: 5 px;
-    border-collapse: collapse;
-}
-
-button {
-    width: 200px;
-    padding: 15px 0;
-    text-align: center;
-    margin: 20px 10px;
-    border-radius: 25px;
-    font-weight: bold;
-    border: 2px solid #ffffff;
-    background: linear-gradient(to left, transparent 50%, #3a3a3a 50%);
-    background-size: 200% 100%;
-    background-position: right;
-    color: #fff;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-    transition: background-position 0.4s ease-in-out, color 0.4s;
-}
-
-button:hover {
-    background-position: left;
-    color: #fff;
-}
-
-.contacts table th,
-.contacts table td {
-    border-bottom: 1px rgba(0, 0, 0, 0.9);
-    background-color: rgba(0, 0, 0, 0.9);
-    color: #ffffff;
-    font-weight: bold;
-    padding: 15px;
-}
-
-.contacts table tr:hover {
-    background-color: rgba(0, 150, 136, 0.2);
-}
-
-.contacts table td {
-    transition: background-color 0.3s ease;
-}
-
-.contacts table tr:last-child td {
-    border-bottom: none;
-}
-
-.contacts table th[colspan="2"] {
-    background-color: rgba(14, 91, 255, 0.9);
-    font-size: 20px;
-    color: #fff;
-    padding: 15px;
-    font-weight: bold;
-}
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+    }
+    
+    body {
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+        background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("photos/bg.jpg") no-repeat center fixed;
+        background-size: cover;
+    }
+    
+    .gallery {
+        display: grid;
+    }
+    
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        /* 3 фото в ряд */
+        grid-template-rows: repeat(2, 200px);
+        /* 2 ряди по 200px */
+        gap: 35px;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding-right: 80%;
+        padding-top: 19%;
+    }
+    
+    .news-item img {
+        height: 290px;
+        width: 390px;
+        border-radius: 25px;
+    }
+    
+    .gallery-photo {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        /* щоб не спотворювались */
+        display: block;
+    }
+    
+    .gallery-photo img {
+        height: 220px;
+        width: 290px;
+        border-radius: 25px;
+    }
+    
+    .banner {
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 0;
+    }
+    
+    .navbar {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0px 50px;
+        position: fixed;
+        left: 0;
+    }
+    
+    .news {
+        padding-top: 300px;
+    }
+    
+    .zagolovok {
+        text-align: center;
+        margin-top: 0px;
+    }
+    
+    .news-list {
+        padding-top: 89px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: space-between;
+        align-items: center;
+        margin: 20px;
+        gap: 250px;
+    }
+    
+    .maincon {
+        color: #fff;
+        text-align: center;
+        padding-top: 400px;
+        width: 900px;
+    }
+    
+    .butns {}
+    
+    .logo {
+        width: 150px;
+        height: 150px;
+        /* прибери фіксовану висоту */
+    }
+    
+    .logo img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        /* тепер працює правильно */
+    }
+    
+    .navigator ul {
+        display: flex;
+        list-style: none;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+    
+    .navigator ul li {
+        position: static;
+        margin: 0;
+    }
+    
+    .navigator ul li a {
+        text-decoration: none;
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 18px;
+        position: relative;
+        display: inline-block;
+        padding-bottom: 5px;
+    }
+    
+    .navigator ul li a::after {
+        content: '';
+        height: 3px;
+        width: 0;
+        background: #009688;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        transition: width 0.5s;
+    }
+    
+    .contacts table {
+        border: 2px solid rgb(255, 255, 255);
+        border-radius: 25px;
+        overflow: hidden;
+        position: absolute;
+        top: 200px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 5;
+        background-color: transparent;
+        padding: 5 px;
+        border-collapse: collapse;
+    }
+    
+    button {
+        width: 200px;
+        padding: 15px 0;
+        text-align: center;
+        margin: 20px 10px;
+        border-radius: 25px;
+        font-weight: bold;
+        border: 2px solid #ffffff;
+        background: linear-gradient(to left, transparent 50%, #3a3a3a 50%);
+        background-size: 200% 100%;
+        background-position: right;
+        color: #fff;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        transition: background-position 0.4s ease-in-out, color 0.4s;
+    }
+    
+    button:hover {
+        background-position: left;
+        color: #fff;
+    }
+    
+    .contacts table th,
+    .contacts table td {
+        border-bottom: 1px rgba(0, 0, 0, 0.9);
+        background-color: rgba(0, 0, 0, 0.9);
+        color: #ffffff;
+        font-weight: bold;
+        padding: 15px;
+    }
+    
+    .contacts table tr:hover {
+        background-color: rgba(0, 150, 136, 0.2);
+    }
+    
+    .contacts table td {
+        transition: background-color 0.3s ease;
+    }
+    
+    .contacts table tr:last-child td {
+        border-bottom: none;
+    }
+    
+    .contacts table th[colspan="2"] {
+        background-color: rgba(14, 91, 255, 0.9);
+        font-size: 20px;
+        color: #fff;
+        padding: 15px;
+        font-weight: bold;
+    }
